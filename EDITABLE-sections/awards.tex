@@ -1,14 +1,15 @@
 
 \newcommand{\singlebulletliststyle}[1]{
-    \ifthenelse{\equal{#1}{}}{}{
-        \readlist\mylist{#1}%
-        \begin{itemize} 
-            \foreachitem\z\in\mylist[]{
-                \item \z
-            }
-        \end{itemize}
-        \bulletpadding
-    }
+  \ifthenelse{\equal{#1}{}}{}{
+    \readlist\mylist{#1}%
+    \begin{itemize} 
+      \setlength{\itemsep}{-0.5em} % Adjust the value to reduce or increase the space
+      \foreachitem\z\in\mylist[]{
+        \item \z
+      }
+    \end{itemize}
+    \bulletpadding
+  }
 }
 
 \newcommand*\CVAwardsField[1][]{%
@@ -23,7 +24,6 @@
   \begin{minipage}[t]{\datesareavalue\textwidth}
     \RaggedLeft{\datesstyle{\dates}}
   \end{minipage}%
-  %\vspace{\baselineskip}
   }
   \endgroup
 }
@@ -34,30 +34,30 @@ bulletlist={Best Poster - Oxford Biology Graduate Symposium. \href{https://drive
 \CVAwardsField[
     dates={2022},
     bulletlist={
-        Edward Gray Institute graduate scholarship (£26k)}
+        Edward Gray Institute graduate scholarship}
 ]
 
 \CVAwardsField[dates={2022}, 
-bulletlist={{Conference grant: St Hilda’s College - University of Oxford (£500)}}]
+bulletlist={{Conference grant: St Hilda’s College - University of Oxford}}]
 
 
 \CVAwardsField[
     dates={2019},
     bulletlist={
-        Clarendon \& Mary Frances Wagley scholarship (£180k)}
+        Clarendon \& Mary Frances Wagley scholarship}
 ]
 
 \CVAwardsField[
     dates={2018},
     bulletlist={
-        Durham undergraduate research scholarship (£2k)}
+        Durham undergraduate research scholarship}
 ]
 
 \CVAwardsField[dates={2018}, 
-bulletlist={Travel grant: University of Paris-Saclay/Pascal Institute (£750)}]
+bulletlist={Travel grant: University of Paris-Saclay/Pascal Institute}]
 
 \CVAwardsField[dates={2018}, 
-bulletlist={Travel grant: University of Vienna | school in neuroasthetics (£1k)}]
+bulletlist={Travel grant: University of Vienna | school in neuroasthetics}]
 
 
 
