@@ -1,0 +1,49 @@
+\newcommand{\nametitle}[2]{
+
+\rightminipageonly{%
+
+        \begin{minipage}{0.45\textwidth}
+
+        %%%%% NAME
+        \vspace{10pt}
+        
+        {\fontsize{\topnamesizevalue pt}{\topnamesizevalue pt}{
+            \color{nametoptxt} \bf %\fontone
+            \!\!\MakeUppercase{\textls[\topnamestretch]{#1}}
+        }}
+        
+        \vspace{0.1cm}
+        
+        {\fontsize{\bottomnamesizevalue}{\bottomnamesizevalue}{
+            \color{namebottomtxt} %\bf %\fontone
+            \!\MakeUppercase{\textls[\bottomnamestretch]{#2}}
+        }}
+
+        \vspace{0.1cm}
+        
+        \hspace{2pt}\faGithub\hspace{3pt}\href{https://github.com/nilomr}{nilomr} 
+        \hspace{2pt}\faHome\hspace{3pt}\href{https://nilomr.github.io/}{personal website}
+        \vspace{0.4cm}
+        
+        %%%%%
+        \end{minipage}%
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+        \vspace{0pt}
+        \begin{flushright}
+        
+        \fontsize{8pt}{9pt}\selectfont
+        \color{linkurlcolor}
+        info@nilomr.com \\
+        \color[HTML]{707070}
+        Department of Biology,\\
+        University of Oxford\\
+        Oxford, England\\
+
+        \end{flushright}
+        \end{minipage}%
+        
+}
+
+}
+

@@ -1,0 +1,75 @@
+
+\newcommand{\singlebulletliststyle}[1]{
+    \ifthenelse{\equal{#1}{}}{}{
+        \readlist\mylist{#1}%
+        \begin{itemize} 
+            \foreachitem\z\in\mylist[]{
+                \item \z
+            }
+        \end{itemize}
+        \bulletpadding
+    }
+}
+
+\newcommand*\CVAwardsField[1][]{%
+  \begingroup
+  \setkeys{cvexp}{#1}
+  \color{bodytxt}
+  \rightminipageonly{
+  \begin{minipage}[t]{\segmenttitlesareavalue\textwidth}
+    \singlebulletliststyle{\bulletlist}
+  \end{minipage}%
+    %\hfill%
+  \begin{minipage}[t]{\datesareavalue\textwidth}
+    \RaggedLeft{\datesstyle{\dates}}
+  \end{minipage}%
+  %\vspace{\baselineskip}
+  }
+  \endgroup
+}
+
+\CVAwardsField[dates={2022}, 
+bulletlist={Best Poster - Oxford Biology Graduate Symposium. \href{https://drive.google.com/file/d/17yHfrSDRXbTCyRfN_nzYsbplCS5PW15w/view?usp=share_link}{\textexample{[See poster]}}}]
+
+\CVAwardsField[
+    dates={2022},
+    bulletlist={
+        Edward Gray Institute graduate scholarship (£26k)}
+]
+
+\CVAwardsField[dates={2022}, 
+bulletlist={{Conference grant: St Hilda’s College - University of Oxford (£500)}}]
+
+
+\CVAwardsField[
+    dates={2019},
+    bulletlist={
+        Clarendon \& Mary Frances Wagley scholarship (£180k)}
+]
+
+\CVAwardsField[
+    dates={2018},
+    bulletlist={
+        Durham undergraduate research scholarship (£2k)}
+]
+
+\CVAwardsField[dates={2018}, 
+bulletlist={Travel grant: University of Paris-Saclay/Pascal Institute (£750)}]
+
+\CVAwardsField[dates={2018}, 
+bulletlist={Travel grant: University of Vienna | school in neuroasthetics (£1k)}]
+
+
+
+
+
+% \CVBulletListField[
+%     bulletlistcontent={
+%         {Clarendon \& Mary Frances Wagley scholarship (£180k)},
+%         {Edward Gray Institute graduate scholarship (£26k)},
+%         {Durham undergraduate research scholarship (£2k)},
+%         {Travel grant: University of Paris-Saclay/Pascal Institute (€750)},
+%         {Conference grant: St Hilda’s College, University of Oxford (£500)},
+%         {Best Graduate Poster - Oxford Biology Graduate Symposium 2022. \href{https://drive.google.com/file/d/17yHfrSDRXbTCyRfN_nzYsbplCS5PW15w/view?usp=share_link}{\textexample{[See poster]}}}
+%     }
+% ]
